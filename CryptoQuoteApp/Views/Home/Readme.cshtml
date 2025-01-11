@@ -1,0 +1,112 @@
+﻿@* @{ *@
+@*     ViewData["Title"] = "Readme"; *@
+@* } *@
+@* <div class="container mt-5"> *@
+@*     <div class="jumbotron bg-light p-5 shadow-sm"> *@
+@*         <h1 class="display-4">Crypto Quote Application</h1> *@
+@*         <p>This is a simple ASP.NET Core MVC web application that provides live cryptocurrency quotes for various currencies. The application allows users to input a cryptocurrency code (like BTC or ETH) and get the latest price data for that cryptocurrency.</p> *@
+@* *@
+@*         <h3>Features</h3> *@
+@*         <ul> *@
+@*             <li><strong>Cryptocurrency Quote:</strong> Enter a cryptocurrency code (e.g., BTC, ETH) and get the latest quote.</li> *@
+@*             <li><strong>Real-Time Data:</strong> Quotes are fetched in real-time from the configured cryptocurrency data source (e.g., an API).</li> *@
+@*             <li><strong>Responsive UI:</strong> The app uses Bootstrap for a responsive design that works on both desktop and mobile.</li> *@
+@*             <li><strong>Table View:</strong> The results are displayed in a table format with currency values in USD or other local formats.</li> *@
+@*         </ul> *@
+@* *@
+@*         <h3>Requirements</h3> *@
+@*         <ul> *@
+@*             <li><strong>.NET 8 SDK</strong> (or later) installed on your machine.</li> *@
+@*             <li>A working internet connection to fetch real-time cryptocurrency data.</li> *@
+@*         </ul> *@
+@* *@
+@*         <h3>Installation</h3> *@
+@*         <h4>Clone the Repository</h4> *@
+@*         <pre><code>git clone https://github.com/yourusername/crypto-quote-app.git</code></pre> *@
+@* *@
+@*         <h4>Install Dependencies</h4> *@
+@*         <pre><code>dotnet restore</code></pre> *@
+@* *@
+@*         <h4>Running the Application</h4> *@
+@*         <p>You can start the application by running the following command in the root of the project:</p> *@
+@*         <pre><code>dotnet run</code></pre> *@
+@*         <p>This will start the application on <code>http://localhost:5000</code>. Open this URL in your web browser to interact with the application.</p> *@
+@* *@
+@*         <h3>Features</h3> *@
+@* *@
+@*         <h4>User Interface:</h4> *@
+@*         <ul> *@
+@*             <li><strong>Home Page:</strong> The home page contains a form where the user can enter a cryptocurrency code (e.g., BTC for Bitcoin or ETH for Ethereum).</li> *@
+@*             <li><strong>Quotes Table:</strong> After submitting the form, the cryptocurrency’s quote is displayed in a table with the name of the cryptocurrency and its corresponding value.</li> *@
+@*         </ul> *@
+@* *@
+@*         <h4>Example Flow:</h4> *@
+@*         <ol> *@
+@*             <li>Navigate to the homepage.</li> *@
+@*             <li>Enter a cryptocurrency code like <code>BTC</code> in the input field.</li> *@
+@*             <li>Click the <strong>Get Quote</strong> button.</li> *@
+@*             <li>The page will display the cryptocurrency's price, formatted for your region (e.g., USD).</li> *@
+@*         </ol> *@
+@* *@
+@*         <h3>Data Source</h3> *@
+@*         <p>The application uses a third-party API (e.g., CoinGecko or any custom API) to fetch live data. Ensure that the API URL and endpoint are properly configured in the app for it to work.</p> *@
+@* *@
+@*         <h3>Technical Details:</h3> *@
+@*         <h4>Models:</h4> *@
+@*         <ul> *@
+@*             <li><strong>CryptoQuote:</strong> Contains the main data structure for representing cryptocurrency quotes.</li> *@
+@*             <li><strong>Quote:</strong> Represents each individual quote, including the cryptocurrency code and its value.</li> *@
+@*         </ul> *@
+@* *@
+@*         <h4>Controllers:</h4> *@
+@*         <ul> *@
+@*             <li><strong>HomeController:</strong> Handles the form submission, retrieves data, and passes it to the view.</li> *@
+@*         </ul> *@
+@* *@
+@*         <h4>Views:</h4> *@
+@*         <ul> *@
+@*             <li><strong>Index.cshtml:</strong> Contains the form for user input and displays the resulting table of quotes.</li> *@
+@*             <li><strong>Readme.cshtml:</strong> Displays the README file’s content (used as a static page in the web app).</li> *@
+@*         </ul> *@
+@* *@
+@*         <h3>API Integration</h3> *@
+@*         <p>The app makes a GET request to a cryptocurrency API (e.g., CoinGecko or any custom API) to fetch live data. Ensure that the API URL and endpoint are properly configured in the app for it to work.</p> *@
+@* *@
+@*         <h3>Tests</h3> *@
+@*         <h4>Unit Tests:</h4> *@
+@*         <p>We use <strong>xUnit</strong> for testing. Unit tests are available for checking the data retrieval from the API and formatting of the quote values.</p> *@
+@* *@
+@*         <h4>UI Tests:</h4> *@
+@*         <p>Use <strong>Selenium</strong> or other UI test libraries to verify form submission, display of quotes, and error handling.</p> *@
+@* *@
+@*         <h4>Running Tests:</h4> *@
+@*         <pre><code>dotnet test</code></pre> *@
+@* *@
+@*         <h3>Error Handling</h3> *@
+@*         <ul> *@
+@*             <li><strong>Invalid Cryptocurrency Code:</strong> If the user enters an incorrect or unsupported code, the application displays an error message.</li> *@
+@*             <li><strong>API Failure:</strong> If the external API fails, an error message is shown to the user with instructions to try again later.</li> *@
+@*         </ul> *@
+@* *@
+@*         <h3>Contribution</h3> *@
+@*         <p>Feel free to fork this repository and contribute by adding new features, fixing bugs, or improving the documentation. When contributing, make sure to:</p> *@
+@*         <ol> *@
+@*             <li>Fork the repository.</li> *@
+@*             <li>Create a new branch for your feature or fix.</li> *@
+@*             <li>Submit a pull request with a clear description of your changes.</li> *@
+@*         </ol> *@
+@* *@
+@*         <h3>License</h3> *@
+@*         <p>This application is licensed under the MIT License.</p> *@
+@* *@
+@*         <h3>Contact</h3> *@
+@*         <p>For any questions, please contact <a href="mailto:your-email@example.com">your-email@example.com</a>.</p> *@
+@* *@
+@*         <h3>Acknowledgments</h3> *@
+@*         <ul> *@
+@*             <li>This project is built using <strong>ASP.NET Core</strong>.</li> *@
+@*             <li>Special thanks to the <a href="https://www.coingecko.com/">CoinGecko API</a> for providing free cryptocurrency data.</li> *@
+@*             <li><strong>Bootstrap 5</strong> for responsive web design.</li> *@
+@*         </ul> *@
+@*     </div> *@
+@* </div> *@

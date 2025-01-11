@@ -1,0 +1,88 @@
+﻿@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model CryptoQuoteResponse
+@{
+ViewData["Title"] = "Crypto Quote";
+}
+
+<div class="container mt-5">
+    <div class="jumbotron bg-light p-5 shadow-sm">
+        <h1 class="display-4 text-center mb-4">Get Cryptocurrency Quote</h1>
+
+        <form method="post" class="mb-4">
+            <div class="mb-3">
+                <label for="cryptoCode" class="form-label">Cryptocurrency Code:</label>
+                <input
+                    type="text"
+                    id="cryptoCode"
+                    name="cryptoCode"
+                    class="form-control"
+                    placeholder="e.g., BTC, ETH"
+                    required />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Get Quote</button>
+        </form>
+
+        @if (Model?.Success == true)
+        {
+            <h2 class="mt-4 text-center">Quotes for @Model.CryptoQuote.Cryptocurrency</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped mt-3">
+                    <thead class="table-info">
+                    <tr>
+                        <th>Currency</th>
+                        <th>Quote</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var quote in Model.CryptoQuote.Quotes)
+                    {
+                        <tr>
+                            <td>@quote.Key</td>
+                            @{
+                                var usCulture = new CultureInfo("en-US");
+                            }
+                            <td>@quote.Value.ToString("C", usCulture)</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        }
+
+        @if (Model?.Success == false)
+        {
+            <h2 class="mt-4 text-center">Oops. We have been Knabbed by an error</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped mt-3">
+                    <thead class="table-danger">
+                    <tr>
+                        <th>Error</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                   
+                    <tr>
+                        <td>@Model?.Message</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        }
+
+        @* <div class="text-center mt-4"> *@
+        @*     <!-- Change the <a> tag to link to the "Readme" view in the Home controller --> *@
+        @*     <a class="btn btn-secondary" href="@Url.Action("Readme", "Home")">View README File</a> *@
+        @* </div> *@
+    </div>
+
+    @* Uncomment this block if you want to display error messages *@
+    @* 
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger mt-4">
+            <p>@ViewBag.Error</p>
+        </div>
+    }
+    *@
+</div>
