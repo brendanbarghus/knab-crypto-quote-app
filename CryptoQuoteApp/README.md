@@ -19,7 +19,7 @@ This is a simple ASP.NET Core MVC web application that provides live cryptocurre
 #### Clone the Repository
 
 ```
-git clone https://github.com/bbarghus/crypto-quote-app.git
+git clone https://github.com/brendanbarghus/knab-crypto-quote-app.git
 ```
 
 #### Install Dependencies
